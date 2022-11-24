@@ -8,6 +8,15 @@ export class RugoException extends Error {
   }
 }
 
+export class ServiceError extends RugoException {
+  constructor (message) {
+    super(message);
+
+    this.status = 500;
+    this.source = { pointer: '' };
+  }
+}
+
 export class ValidationError extends RugoException {
   constructor (msg) {
     super(msg);
