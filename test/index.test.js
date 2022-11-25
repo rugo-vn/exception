@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { expect } from 'chai';
-import { RugoException } from '@rugo-vn/exception';
+import { RugoException } from '../src/index.js';
 
 describe('Exception test', () => {
   it('should create a new error class', async () => {
