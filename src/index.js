@@ -25,6 +25,30 @@ export class ValidationError extends RugoException {
   }
 }
 
+export class AclError extends RugoException {
+  constructor (msg) {
+    super(msg);
+
+    this.status = 403;
+  }
+}
+
+export class NotFoundError extends RugoException {
+  constructor (msg = 'Not found') {
+    super(msg);
+
+    this.status = 404;
+  }
+}
+
+export class ForbiddenError extends RugoException {
+  constructor (msg) {
+    super(msg);
+
+    this.status = 403;
+  }
+}
+
 export const ajvError = function (err) {
   switch (err.keyword) {
     // non-nested
