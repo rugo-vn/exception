@@ -7,6 +7,9 @@
 - `RugoException`
 - `ServiceError`
 - `ValidationError`
+- `AclError`
+- `NotFoundError`
+- `ForbiddenError`
 
 ### Methods
 
